@@ -1,0 +1,14 @@
+.idea
+build/
+
+CMakeFiles
+Makefile
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+
+*.o
+*.a
+*.so
+*.dylib
+*.dll
