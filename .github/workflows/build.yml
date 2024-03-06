@@ -45,6 +45,8 @@ jobs:
     if: ${{ github.event_name != 'pull_request' && github.ref_name == 'master' }}
     steps:
       - uses: actions/checkout@v4
+      - name: Install Doxygen
+        uses: ssciwr/doxygen-install@v1
       - name: Build Docs
         run: >
           cmake .
