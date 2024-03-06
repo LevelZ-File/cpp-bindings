@@ -1,11 +1,17 @@
 .idea
 build/
+Testing/
 
 CMakeFiles
 Makefile
 CMakeCache.txt
 cmake_install.cmake
 CTestTestfile.cmake
+DartConfiguration.tcl
+tests-*.cmake
+levelz-test-*
+CMakeDoxyfile.in
+CMakeDoxygenDefaults.cmake
 
 *.o
 *.a
