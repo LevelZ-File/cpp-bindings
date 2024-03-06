@@ -61,4 +61,4 @@ jobs:
         run: cmake --build ${{ steps.strings.outputs.build-output-dir }}
       
       - name: Deploy Doxygen
-        run: bash doxygen.sh ${GITHUB_SHA::7}
+        run: bash doxygen.sh ${{ steps.strings.outputs.build-output-dir }} ${GITHUB_SHA::7}

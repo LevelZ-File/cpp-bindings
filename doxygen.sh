@@ -6,7 +6,7 @@ if [ ! -d "docs" ]; then
   mkdir docs
 fi;
 
-cp -Rfv build/docs/html/* ./docs/
+cp -Rfv $1/build/docs/html/* ./docs/
 
 git switch -f gh-pages
 
@@ -23,5 +23,5 @@ cp -Rfv ./docs/* ./
 rm -rf ./docs
 
 git add .
-git commit -m "Update Docs ($1)"
+git commit -m "Update Docs ($2)"
 git push -f origin gh-pages
