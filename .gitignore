@@ -12,6 +12,7 @@ tests-*.cmake
 levelz-test-*
 CMakeDoxyfile.in
 CMakeDoxygenDefaults.cmake
+cmake-build-debug
 
 *.o
 *.a
