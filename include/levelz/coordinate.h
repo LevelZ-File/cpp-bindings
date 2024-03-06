@@ -62,6 +62,42 @@ namespace LevelZ {
             bool operator!=(const Coordinate2D& other) const {
                 return x != other.x || y != other.y;
             }
+
+            /**
+             * Adds two coordinates together.
+             * @param other The other coordinate to add.
+             * @return The sum of the two coordinates.
+             */
+            Coordinate2D operator+(const Coordinate2D& other) const {
+                return Coordinate2D(x + other.x, y + other.y);
+            }
+
+            /**
+             * Subtracts one coordinate from another.
+             * @param other The other coordinate to subtract.
+             * @return The difference of the two coordinates.
+             */
+            Coordinate2D operator-(const Coordinate2D& other) const {
+                return Coordinate2D(x - other.x, y - other.y);
+            }
+
+            /**
+             * Multiplies the coordinate by a scalar.
+             * @param scalar The scalar to multiply by.
+             * @return The product of the coordinate and the scalar.
+             */
+            Coordinate2D operator*(int scalar) const {
+                return Coordinate2D(x * scalar, y * scalar);
+            }
+
+            /**
+             * Divides the coordinate by a scalar.
+             * @param scalar The scalar to divide by.
+             * @return The quotient of the coordinate and the scalar.
+             */
+            Coordinate2D operator/(int scalar) const {
+                return Coordinate2D(x / scalar, y / scalar);
+            }
     };
 
     /**
@@ -127,6 +163,42 @@ namespace LevelZ {
              */
             bool operator!=(const Coordinate3D& other) const {
                 return x != other.x || y != other.y || z != other.z;
+            }
+
+            /**
+             * Adds two coordinates together.
+             * @param other The other coordinate to add.
+             * @return The sum of the two coordinates.
+             */
+            Coordinate3D operator+(const Coordinate3D& other) const {
+                return Coordinate3D(x + other.x, y + other.y, z + other.z);
+            }
+
+            /**
+             * Subtracts one coordinate from another.
+             * @param other The other coordinate to subtract.
+             * @return The difference of the two coordinates.
+             */
+            Coordinate3D operator-(const Coordinate3D& other) const {
+                return Coordinate3D(x - other.x, y - other.y, z - other.z);
+            }
+
+            /**
+             * Multiplies the coordinate by a scalar.
+             * @param scalar The scalar to multiply by.
+             * @return The product of the coordinate and the scalar.
+             */
+            Coordinate3D operator*(int scalar) const {
+                return Coordinate3D(x * scalar, y * scalar, z * scalar);
+            }
+
+            /**
+             * Divides the coordinate by a scalar.
+             * @param scalar The scalar to divide by.
+             * @return The quotient of the coordinate and the scalar.
+             */
+            Coordinate3D operator/(int scalar) const {
+                return Coordinate3D(x / scalar, y / scalar, z / scalar);
             }
     };
 }
