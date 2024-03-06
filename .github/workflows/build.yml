@@ -48,8 +48,6 @@ jobs:
       - name: Install Doxygen
         uses: ssciwr/doxygen-install@v1
       - name: Build Docs
-        run: >
-          cmake .
-          make docs
+        run: cmake . && make docs
       - name: Deploy Doxygen
         run: bash doxygen.sh ${GITHUB_SHA::7}
