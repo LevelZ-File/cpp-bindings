@@ -55,7 +55,7 @@ jobs:
 
       - name: Test Project
         working-directory: ${{ steps.strings.outputs.build-output-dir }}
-        run: ctest
+        run: ctest -C Release
   
   deploy:
     runs-on: ubuntu-latest
