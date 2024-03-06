@@ -45,20 +45,9 @@ jobs:
     if: ${{ github.event_name != 'pull_request' && github.ref_name == 'master' }}
     steps:
       - uses: actions/checkout@v4
-      - name: Set Reusable Strings
-        id: strings
-        shell: bash
-        run: |
-          echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
-    
-      - name: Configure CMake
+      - name: Build Docs
         run: >
-          cmake -B ${{ steps.strings.outputs.build-output-dir }}
-          -DCMAKE_CXX_COMPILER=clang++
-          -S ${{ github.workspace }}
-      
-      - name: Build Project
-        run: cmake --build ${{ steps.strings.outputs.build-output-dir }}
-      
+          cmake .
+          make docs
       - name: Deploy Doxygen
-        run: bash doxygen.sh ${{ steps.strings.outputs.build-output-dir }} ${GITHUB_SHA::7}
+        run: bash doxygen.sh ${GITHUB_SHA::7}
