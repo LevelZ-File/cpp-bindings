@@ -1,2 +1,3 @@
 # levelz-cpp
-> C/C++ Parser & API For LevelZ File Format
+
+> Header-only C/C++ Parser & API For LevelZ File Format
