@@ -51,7 +51,7 @@ jobs:
           -S ${{ github.workspace }}
 
       - name: Build Project
-        run: cmake --build ${{ steps.strings.outputs.build-output-dir }} .
+        run: cmake --build ${{ steps.strings.outputs.build-output-dir }}
 
       - name: Test Project
         working-directory: ${{ steps.strings.outputs.build-output-dir }}
@@ -78,7 +78,7 @@ jobs:
           -S ${{ github.workspace }}
       
       - name: Build Project
-        run: cmake --build ${{ steps.strings.outputs.build-output-dir }} .
+        run: cmake --build ${{ steps.strings.outputs.build-output-dir }}
       
       - name: Deploy Doxygen
         run: bash doxygen.sh ${GITHUB_SHA::7}
