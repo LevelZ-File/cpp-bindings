@@ -78,6 +78,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classLevelZ_1_1Coordinate2D-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LevelZ::Coordinate2D Class Reference</div></div>
@@ -108,6 +109,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef3eea1ac2282f8c79ad0579ec392f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d7cabb6117f8f2cfede66974a64a5e" id="r_ab8d7cabb6117f8f2cfede66974a64a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLevelZ_1_1Coordinate2D.html">Coordinate2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8d7cabb6117f8f2cfede66974a64a5e">operator/</a> (int scalar) const</td></tr>
 <tr class="separator:ab8d7cabb6117f8f2cfede66974a64a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80aabdd49393bc7a985014fe55f94f0" id="r_ae80aabdd49393bc7a985014fe55f94f0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae80aabdd49393bc7a985014fe55f94f0">to_string</a> () const</td></tr>
+<tr class="separator:ae80aabdd49393bc7a985014fe55f94f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a519056f3a1966babf47ebae7bc77d095" id="r_a519056f3a1966babf47ebae7bc77d095"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classLevelZ_1_1Coordinate2D.html">Coordinate2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a519056f3a1966babf47ebae7bc77d095">fromString</a> (const std::string &amp;str)</td></tr>
+<tr class="separator:a519056f3a1966babf47ebae7bc77d095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -213,6 +221,38 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a519056f3a1966babf47ebae7bc77d095" name="a519056f3a1966babf47ebae7bc77d095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519056f3a1966babf47ebae7bc77d095">&#9670;&#160;</a></span>fromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classLevelZ_1_1Coordinate2D.html">Coordinate2D</a> LevelZ::Coordinate2D::fromString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Converts a string to a 2D coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>The string to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classLevelZ_1_1Coordinate2D.html">Coordinate2D</a> The 2D coordinate. </dd></dl>
+
+</div>
+</div>
 <a id="ad8ac61e474e1ae9cd012f26f95eac1ec" name="ad8ac61e474e1ae9cd012f26f95eac1ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8ac61e474e1ae9cd012f26f95eac1ec">&#9670;&#160;</a></span>getMagnitude()</h2>
 
@@ -428,6 +468,32 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the coordinates are equal, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ae80aabdd49393bc7a985014fe55f94f0" name="ae80aabdd49393bc7a985014fe55f94f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80aabdd49393bc7a985014fe55f94f0">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LevelZ::Coordinate2D::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Converts this 2D coordinate to a string. </p><dl class="section return"><dt>Returns</dt><dd>The string representation of the coordinate. </dd></dl>
 
 </div>
 </div>
