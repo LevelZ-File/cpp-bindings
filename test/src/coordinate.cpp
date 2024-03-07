@@ -24,5 +24,12 @@ int main() {
     r |= assert(LevelZ::Coordinate2D(3, 4).getMagnitude() == 25);
     r |= assert(LevelZ::Coordinate3D(3, 4, 5).getMagnitude() == 50);
 
+    // #fromString
+    r |= assert(LevelZ::Coordinate2D::fromString("[1, 2]") == LevelZ::Coordinate2D(1, 2));
+    r |= assert(LevelZ::Coordinate2D::fromString("[-2,4]") == LevelZ::Coordinate2D(-2,4));
+
+    r |= assert(LevelZ::Coordinate3D::fromString("[1, 2, 3]") == LevelZ::Coordinate3D(1, 2, 3));
+    r |= assert(LevelZ::Coordinate3D::fromString("[-2,4,5]") == LevelZ::Coordinate3D(-2,4,5));
+
     return r;
 }
