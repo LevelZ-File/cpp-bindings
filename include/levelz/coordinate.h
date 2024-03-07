@@ -98,6 +98,25 @@ namespace LevelZ {
             Coordinate2D operator/(int scalar) const {
                 return Coordinate2D(x / scalar, y / scalar);
             }
+
+            /**
+             * Converts this 2D coordinate to a string.
+             * @return The string representation of the coordinate.
+             */
+            std::string to_string() const {
+                return "[" + std::to_string(x) + "," + std::to_string(y) + "]";
+            }
+
+            /**
+             * Converts a string to a 2D coordinate.
+             * @param str The string to convert.
+             * @return Coordinate2D The 2D coordinate.
+             */
+            static Coordinate2D fromString(const std::string& str) {
+                std::string x = str.substr(1, str.find(",") - 1);
+                std::string y = str.substr(str.find(",") + 1, str.find("]") - str.find(",") - 1);
+                return Coordinate2D(std::stoi(x), std::stoi(y));
+            }
     };
 
     /**
@@ -199,6 +218,26 @@ namespace LevelZ {
              */
             Coordinate3D operator/(int scalar) const {
                 return Coordinate3D(x / scalar, y / scalar, z / scalar);
+            }
+
+            /**
+             * Converts this 3D coordinate to a string.
+             * @return The string representation of the coordinate.
+             */
+            std::string to_string() const {
+                return "[" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + "]";
+            }
+
+            /**
+             * Converts a string to a 3D coordinate.
+             * @param str The string to convert.
+             * @return Coordinate3D The 3D coordinate.
+             */
+            static Coordinate3D fromString(const std::string& str) {
+                std::string x = str.substr(1, str.find(",") - 1);
+                std::string y = str.substr(str.find(",") + 1, str.rfind(",") - str.find(",") - 1);
+                std::string z = str.substr(str.rfind(",") + 1, str.find("]") - str.rfind(",") - 1);
+                return Coordinate3D(std::stoi(x), std::stoi(y), std::stoi(z));
             }
     };
 }
