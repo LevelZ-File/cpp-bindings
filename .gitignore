@@ -2,6 +2,7 @@
 .vscode
 build/
 Testing/
+.cmake/
 
 CMakeFiles
 Makefile
@@ -13,7 +14,6 @@ tests-*.cmake
 levelz-test-*
 CMakeDoxyfile.in
 CMakeDoxygenDefaults.cmake
-cmake-build-debug
 
 *.o
 *.a
