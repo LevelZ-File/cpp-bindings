@@ -77,6 +77,23 @@ namespace LevelZ {
             bool operator!=(const Block& other) const {
                 return name != other.name || properties != other.properties;
             }
+
+            /**
+             * Converts this Block into a string.
+             * @return The string representation of this Block.
+             */
+            std::string to_string() const {
+                std::string str;
+                str += name + "<";
+
+                for (auto const& [k, v] : properties) {
+                    str += k + "=" + v;
+                }
+
+                str += ">";
+
+                return str;
+            }
     };
 
 }
