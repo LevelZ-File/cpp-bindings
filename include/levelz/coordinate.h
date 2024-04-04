@@ -5,9 +5,26 @@
 namespace LevelZ {
 
     /**
+     * Represents a LevelZ Coordinate.
+     */
+    struct Coordinate {
+        /**
+         * Converts this coordinate to a string.
+         * @return The string representation of the coordinate.
+         */
+        virtual std::string toString() const = 0;
+
+        /**
+         * Gets the magnitude of the coordinate.
+         * @return Coordinate Magnitude
+         */
+        virtual int getMagnitude() const = 0;
+    };
+
+    /**
      * Represents a 2D coordinate.
      */
-    class Coordinate2D {
+    struct Coordinate2D : Coordinate {
         public:
             /**
              * The X coordinate.
@@ -103,7 +120,7 @@ namespace LevelZ {
              * Converts this 2D coordinate to a string.
              * @return The string representation of the coordinate.
              */
-            std::string to_string() const {
+            std::string toString() const {
                 return "[" + std::to_string(x) + "," + std::to_string(y) + "]";
             }
 
@@ -122,7 +139,7 @@ namespace LevelZ {
     /**
      * Represents a 3D coordinate.
      */
-    class Coordinate3D {
+    struct Coordinate3D : Coordinate {
         public:
             /**
              * The X coordinate.
@@ -224,7 +241,7 @@ namespace LevelZ {
              * Converts this 3D coordinate to a string.
              * @return The string representation of the coordinate.
              */
-            std::string to_string() const {
+            std::string toString() const {
                 return "[" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + "]";
             }
 

@@ -8,7 +8,7 @@ namespace LevelZ {
     /**
      * Represents a block in a game level.
      */
-    class Block {
+    struct Block {
         public:
             /**
              * The name of the block.
