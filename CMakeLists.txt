@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(levelz-cpp CXX)
+project(levelz-cpp 
+    LANGUAGES C CXX 
+    VERSION 0.1.0 
+    DESCRIPTION "C/C++ implementation of the LevelZ File Format"
+    HOMEPAGE_URL "https://github.com/LevelZ-File/cpp-bindings"
+)
 set(CMAKE_CXX_STANDARD 17)
 
 # Sources
