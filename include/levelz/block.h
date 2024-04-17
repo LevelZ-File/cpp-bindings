@@ -110,14 +110,14 @@ namespace LevelZ {
              * @param block The block of the object.
              * @param coordinate The coordinate of the object.
              */
-            LevelObject(Block block, Coordinate2D coordinate) : _block(block), _coordinate(&coordinate) {}
+            LevelObject(Block block, Coordinate2D coordinate) : _block(block), _coordinate(new Coordinate2D(coordinate)) {}
 
             /**
              * Constructs a new LevelObject with the specified block and coordinate.
              * @param block The block of the object.
              * @param coordinate The coordinate of the object.
              */
-            LevelObject(Block block, Coordinate3D coordinate) : _block(block), _coordinate(&coordinate) {}
+            LevelObject(Block block, Coordinate3D coordinate) : _block(block), _coordinate(new Coordinate3D(coordinate)) {}
 
             /**
              * Gets the block of the object.
