@@ -2,6 +2,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <memory>
 
 namespace LevelZ {
 
@@ -93,6 +94,71 @@ namespace LevelZ {
                 str += ">";
 
                 return str;
+            }
+    };
+
+    /**
+     * Utility Object for representing a Level Block and its Coordinate.
+     */
+    struct LevelObject {
+        private:
+            Coordinate* _coordinate;
+            Block _block;
+        public:
+            /**
+             * Constructs a new LevelObject with the specified block and coordinate.
+             * @param block The block of the object.
+             * @param coordinate The coordinate of the object.
+             */
+            LevelObject(Block block, Coordinate2D coordinate) : _block(block), _coordinate(&coordinate) {}
+
+            /**
+             * Constructs a new LevelObject with the specified block and coordinate.
+             * @param block The block of the object.
+             * @param coordinate The coordinate of the object.
+             */
+            LevelObject(Block block, Coordinate3D coordinate) : _block(block), _coordinate(&coordinate) {}
+
+            /**
+             * Gets the block of the object.
+             * @return Block of the object.
+             */
+            inline Block block() {
+                return _block;
+            }
+            
+            /**
+             * Gets the coordinate of the object.
+             * @return Coordinate of the object.
+             */
+            Coordinate* coordinate() {
+                return _coordinate;
+            }
+
+            /**
+             * Compares two LevelObjects for equality.
+             * @param other The other LevelObject to compare to.
+             * @return True if the LevelObjects are equal, false otherwise.
+             */
+            bool operator==(const LevelObject& other) const {
+                return _block == other._block && _coordinate->getMagnitude() == other._coordinate->getMagnitude();
+            }
+
+            /**
+             * Compares two LevelObjects for inequality.
+             * @param other The other LevelObject to compare to.
+             * @return True if the LevelObjects are not equal, false otherwise.
+             */
+            bool operator!=(const LevelObject& other) const {
+                return _block != other._block || _coordinate->getMagnitude() != other._coordinate->getMagnitude();
+            }
+
+            /**
+             * Converts this LevelObject into a string.
+             * @return The string representation of this LevelObject.
+             */
+            std::string to_string() const {
+                return _block.to_string() + ": " + _coordinate->to_string();
             }
     };
 
