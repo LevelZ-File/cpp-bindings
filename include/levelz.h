@@ -6,6 +6,7 @@
 
 #include "levelz/coordinate.h"
 #include "levelz/block.h"
+#include "levelz/level.h"
 
 namespace LevelZ {
 
