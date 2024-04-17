@@ -12,13 +12,13 @@ namespace LevelZ {
          * Converts this coordinate to a string.
          * @return The string representation of the coordinate.
          */
-        virtual std::string toString() const = 0;
+        virtual std::string to_string() const = 0;
 
         /**
          * Gets the magnitude of the coordinate.
          * @return Coordinate Magnitude
          */
-        virtual int getMagnitude() const = 0;
+        virtual double getMagnitude() const = 0;
     };
 
     /**
@@ -29,12 +29,12 @@ namespace LevelZ {
             /**
              * The X coordinate.
              */
-            int x;
+            double x;
 
             /**
              * The Y coordinate.
              */
-            int y;
+            double y;
 
             /**
              * Initializes a new instance of the Coordinate2D class at [0, 0].
@@ -50,15 +50,40 @@ namespace LevelZ {
 
             /**
              * Initializes a new instance of the Coordinate2D class at the specified coordinates.
+             * @param x The X coordinate.
+             * @param y The Y coordinate.
+             */
+            Coordinate2D(double x, double y) : x(x), y(y) {}
+
+            /**
+             * Initializes a new instance of the Coordinate2D class at the specified coordinates.
              * @param xy The X and Y coordinates in a vector.
              */
             Coordinate2D(std::vector<int> xy) : x(xy.at(0)), y(xy.at(1)) {}
 
             /**
+             * Initializes a new instance of the Coordinate2D class at the specified coordinates.
+             * @param xy The X and Y coordinates in an array.
+             */
+            Coordinate2D(std::array<int, 2> xy) : x(xy.at(0)), y(xy.at(1)) {}
+
+            /**
+             * Initializes a new instance of the Coordinate2D class at the specified coordinates.
+             * @param xy The X and Y coordinates in a vector.
+             */
+            Coordinate2D(std::vector<double> xy) : x(xy.at(0)), y(xy.at(1)) {}
+
+            /**
+             * Initializes a new instance of the Coordinate2D class at the specified coordinates.
+             * @param xy The X and Y coordinates in an array.
+             */
+            Coordinate2D(std::array<double, 2> xy) : x(xy.at(0)), y(xy.at(1)) {}
+
+            /**
              * Gets the magnitude of the coordinate.
              * @return The magnitude of the coordinate.
              */
-            int getMagnitude() const {
+            double getMagnitude() const {
                 return x * x + y * y;
             }
 
@@ -120,7 +145,7 @@ namespace LevelZ {
              * Converts this 2D coordinate to a string.
              * @return The string representation of the coordinate.
              */
-            std::string toString() const {
+            std::string to_string() const {
                 return "[" + std::to_string(x) + "," + std::to_string(y) + "]";
             }
 
@@ -129,10 +154,10 @@ namespace LevelZ {
              * @param str The string to convert.
              * @return Coordinate2D The 2D coordinate.
              */
-            static Coordinate2D fromString(const std::string& str) {
+            static Coordinate2D from_string(const std::string& str) {
                 std::string x = str.substr(1, str.find(",") - 1);
                 std::string y = str.substr(str.find(",") + 1, str.find("]") - str.find(",") - 1);
-                return Coordinate2D(std::stoi(x), std::stoi(y));
+                return Coordinate2D(std::stod(x), std::stod(y));
             }
     };
 
@@ -144,17 +169,17 @@ namespace LevelZ {
             /**
              * The X coordinate.
              */
-            int x;
+            double x;
 
             /**
              * The Y coordinate.
              */
-            int y;
+            double y;
 
             /**
              * The Z coordinate.
              */
-            int z;
+            double z;
 
             /**
              * Initializes a new instance of the Coordinate3D class at [0, 0, 0].
@@ -171,15 +196,41 @@ namespace LevelZ {
 
             /**
              * Initializes a new instance of the Coordinate3D class at the specified coordinates.
+             * @param x The X coordinate.
+             * @param y The Y coordinate.
+             * @param z The Z coordinate.
+             */
+            Coordinate3D(double x, double y, double z) : x(x), y(y), z(z) {}
+
+            /**
+             * Initializes a new instance of the Coordinate3D class at the specified coordinates.
              * @param xyz The X, Y, and Z coordinates in a vector.
              */
             explicit Coordinate3D(std::vector<int> xyz) : x(xyz.at(0)), y(xyz.at(1)), z(xyz.at(2)) {}
 
             /**
+             * Initializes a new instance of the Coordinate3D class at the specified coordinates.
+             * @param xyz The X, Y, and Z coordinates in an array.
+             */
+            explicit Coordinate3D(std::array<int, 3> xyz) : x(xyz.at(0)), y(xyz.at(1)), z(xyz.at(2)) {}
+
+            /**
+             * Initializes a new instance of the Coordinate3D class at the specified coordinates.
+             * @param xyz The X, Y, and Z coordinates in a vector.
+             */
+            explicit Coordinate3D(std::vector<double> xyz) : x(xyz.at(0)), y(xyz.at(1)), z(xyz.at(2)) {}
+
+            /**
+             * Initializes a new instance of the Coordinate3D class at the specified coordinates.
+             * @param xyz The X, Y, and Z coordinates in an array.
+             */
+            explicit Coordinate3D(std::array<double, 3> xyz) : x(xyz.at(0)), y(xyz.at(1)), z(xyz.at(2)) {}
+
+            /**
              * Gets the magnitude of the coordinate.
              * @return Coordinate Magnitude
              */
-            int getMagnitude() const {
+            double getMagnitude() const {
                 return x * x + y * y + z * z;
             }
 
@@ -241,7 +292,7 @@ namespace LevelZ {
              * Converts this 3D coordinate to a string.
              * @return The string representation of the coordinate.
              */
-            std::string toString() const {
+            std::string to_string() const {
                 return "[" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + "]";
             }
 
@@ -250,11 +301,11 @@ namespace LevelZ {
              * @param str The string to convert.
              * @return Coordinate3D The 3D coordinate.
              */
-            static Coordinate3D fromString(const std::string& str) {
+            static Coordinate3D from_string(const std::string& str) {
                 std::string x = str.substr(1, str.find(",") - 1);
                 std::string y = str.substr(str.find(",") + 1, str.rfind(",") - str.find(",") - 1);
                 std::string z = str.substr(str.rfind(",") + 1, str.find("]") - str.rfind(",") - 1);
-                return Coordinate3D(std::stoi(x), std::stoi(y), std::stoi(z));
+                return Coordinate3D(std::stod(x), std::stod(y), std::stod(z));
             }
     };
 }
