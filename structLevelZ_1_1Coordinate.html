@@ -97,16 +97,16 @@ Inheritance diagram for LevelZ::Coordinate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0582a7f266f19414bb33e6cb8debca79" id="r_a0582a7f266f19414bb33e6cb8debca79"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0582a7f266f19414bb33e6cb8debca79">toString</a> () const =0</td></tr>
-<tr class="separator:a0582a7f266f19414bb33e6cb8debca79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46ceec2d772b34f16ded0ed0411e4559" id="r_a46ceec2d772b34f16ded0ed0411e4559"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46ceec2d772b34f16ded0ed0411e4559">getMagnitude</a> () const =0</td></tr>
-<tr class="separator:a46ceec2d772b34f16ded0ed0411e4559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67bb7d9d2b7539a48045e4c8f49a2d8c" id="r_a67bb7d9d2b7539a48045e4c8f49a2d8c"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67bb7d9d2b7539a48045e4c8f49a2d8c">to_string</a> () const =0</td></tr>
+<tr class="separator:a67bb7d9d2b7539a48045e4c8f49a2d8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bffdbb558eb73f85ac43c865469961" id="r_a56bffdbb558eb73f85ac43c865469961"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56bffdbb558eb73f85ac43c865469961">getMagnitude</a> () const =0</td></tr>
+<tr class="separator:a56bffdbb558eb73f85ac43c865469961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a LevelZ <a class="el" href="structLevelZ_1_1Coordinate.html">Coordinate</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a46ceec2d772b34f16ded0ed0411e4559" name="a46ceec2d772b34f16ded0ed0411e4559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46ceec2d772b34f16ded0ed0411e4559">&#9670;&#160;</a></span>getMagnitude()</h2>
+<a id="a56bffdbb558eb73f85ac43c865469961" name="a56bffdbb558eb73f85ac43c865469961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bffdbb558eb73f85ac43c865469961">&#9670;&#160;</a></span>getMagnitude()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int LevelZ::Coordinate::getMagnitude </td>
+          <td class="memname">virtual double LevelZ::Coordinate::getMagnitude </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -129,12 +129,12 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Gets the magnitude of the coordinate. </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="structLevelZ_1_1Coordinate.html">Coordinate</a> Magnitude </dd></dl>
 
-<p>Implemented in <a class="el" href="structLevelZ_1_1Coordinate2D.html#ad8ac61e474e1ae9cd012f26f95eac1ec">LevelZ::Coordinate2D</a>, and <a class="el" href="structLevelZ_1_1Coordinate3D.html#a1ae7148270bd81e3b15bd9f7b13fc23e">LevelZ::Coordinate3D</a>.</p>
+<p>Implemented in <a class="el" href="structLevelZ_1_1Coordinate2D.html#a226f96fae2684ed52ac1d2ad207d6dc7">LevelZ::Coordinate2D</a>, and <a class="el" href="structLevelZ_1_1Coordinate3D.html#a9d429141328a2acf240c69dffffa4e05">LevelZ::Coordinate3D</a>.</p>
 
 </div>
 </div>
-<a id="a0582a7f266f19414bb33e6cb8debca79" name="a0582a7f266f19414bb33e6cb8debca79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0582a7f266f19414bb33e6cb8debca79">&#9670;&#160;</a></span>toString()</h2>
+<a id="a67bb7d9d2b7539a48045e4c8f49a2d8c" name="a67bb7d9d2b7539a48045e4c8f49a2d8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67bb7d9d2b7539a48045e4c8f49a2d8c">&#9670;&#160;</a></span>to_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string LevelZ::Coordinate::toString </td>
+          <td class="memname">virtual std::string LevelZ::Coordinate::to_string </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td> const</td>
@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Converts this coordinate to a string. </p><dl class="section return"><dt>Returns</dt><dd>The string representation of the coordinate. </dd></dl>
 
-<p>Implemented in <a class="el" href="structLevelZ_1_1Coordinate2D.html#a476561c252b60337e7f73686140f6b83">LevelZ::Coordinate2D</a>, and <a class="el" href="structLevelZ_1_1Coordinate3D.html#aeecee58b3cd9bd882f5c9bb7a0a7de74">LevelZ::Coordinate3D</a>.</p>
+<p>Implemented in <a class="el" href="structLevelZ_1_1Coordinate2D.html#ae80aabdd49393bc7a985014fe55f94f0">LevelZ::Coordinate2D</a>, and <a class="el" href="structLevelZ_1_1Coordinate3D.html#a04171d2246142e9eb7c0319ef9c8f79f">LevelZ::Coordinate3D</a>.</p>
 
 </div>
 </div>

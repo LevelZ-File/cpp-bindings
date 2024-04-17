@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['name_0',['name',['../structLevelZ_1_1Block.html#af88f931d7f265ea24cf719582282bdb4',1,'LevelZ::Block']]]
+  ['level_0',['Level',['../structLevelZ_1_1Level.html',1,'LevelZ']]],
+  ['level2d_1',['Level2D',['../structLevelZ_1_1Level2D.html',1,'LevelZ::Level2D'],['../structLevelZ_1_1Level2D.html#a34bb8b3f3b30bbd7a6fbad7d6183ddaa',1,'LevelZ::Level2D::Level2D()'],['../structLevelZ_1_1Level2D.html#a0eb0c1db1e03cea199a688c183878c85',1,'LevelZ::Level2D::Level2D(const std::unordered_map&lt; std::string, std::string &gt; &amp;headers)'],['../structLevelZ_1_1Level2D.html#a5170825a61fa6efd4f02ceb5a672e128',1,'LevelZ::Level2D::Level2D(const std::unordered_map&lt; std::string, std::string &gt; &amp;headers, const std::vector&lt; LevelObject &gt; &amp;blocks)']]],
+  ['level3d_2',['Level3D',['../structLevelZ_1_1Level3D.html',1,'LevelZ::Level3D'],['../structLevelZ_1_1Level3D.html#aa0dff466ae6b22a7a742fa4bf7f6fc9a',1,'LevelZ::Level3D::Level3D()'],['../structLevelZ_1_1Level3D.html#a387f00a3f57fbd7de6ebb55c9e16a3c5',1,'LevelZ::Level3D::Level3D(const std::unordered_map&lt; std::string, std::string &gt; &amp;headers)'],['../structLevelZ_1_1Level3D.html#a304c0b03e42a30019ab1f73667e3d000',1,'LevelZ::Level3D::Level3D(const std::unordered_map&lt; std::string, std::string &gt; &amp;headers, const std::vector&lt; LevelObject &gt; &amp;blocks)']]],
+  ['levelobject_3',['LevelObject',['../structLevelZ_1_1LevelObject.html',1,'LevelZ::LevelObject'],['../structLevelZ_1_1LevelObject.html#a2bfe9148ccdd5582d5836d047cfb5a8a',1,'LevelZ::LevelObject::LevelObject(Block block, Coordinate2D coordinate)'],['../structLevelZ_1_1LevelObject.html#aeea974b6985198788461179adcf3b8d8',1,'LevelZ::LevelObject::LevelObject(Block block, Coordinate3D coordinate)']]]
 ];
