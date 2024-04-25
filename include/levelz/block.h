@@ -2,7 +2,6 @@
 
 #include <string>
 #include <unordered_map>
-#include <memory>
 
 namespace LevelZ {
 
@@ -131,7 +130,7 @@ namespace LevelZ {
              * Gets the coordinate of the object.
              * @return Coordinate of the object.
              */
-            Coordinate* coordinate() {
+            inline Coordinate* coordinate() {
                 return _coordinate;
             }
 
