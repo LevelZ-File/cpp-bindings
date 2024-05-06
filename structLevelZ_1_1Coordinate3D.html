@@ -128,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2173e8981f49d550261c17d9877d9762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04171d2246142e9eb7c0319ef9c8f79f" id="r_a04171d2246142e9eb7c0319ef9c8f79f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04171d2246142e9eb7c0319ef9c8f79f">to_string</a> () const</td></tr>
 <tr class="separator:a04171d2246142e9eb7c0319ef9c8f79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eda0a7aa576c77c67ac91d7cb9483a2" id="r_a8eda0a7aa576c77c67ac91d7cb9483a2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eda0a7aa576c77c67ac91d7cb9483a2">operator&lt;&lt;</a> (std::ostream &amp;strm)</td></tr>
+<tr class="separator:a8eda0a7aa576c77c67ac91d7cb9483a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -598,6 +600,38 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The quotient of the coordinate and the scalar. </dd></dl>
+
+</div>
+</div>
+<a id="a8eda0a7aa576c77c67ac91d7cb9483a2" name="a8eda0a7aa576c77c67ac91d7cb9483a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eda0a7aa576c77c67ac91d7cb9483a2">&#9670;&#160;</a></span>operator&lt;&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; LevelZ::Coordinate3D::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>strm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Overloads the &lt;&lt; operator to allow for easy printing of a <a class="el" href="structLevelZ_1_1Coordinate3D.html">Coordinate3D</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strm</td><td>The output stream to write to. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output stream. </dd></dl>
 
 </div>
 </div>
