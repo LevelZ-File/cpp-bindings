@@ -30,6 +30,21 @@ namespace LevelZ {
 
 namespace {
 
+    static std::vector<std::string> splitString(const std::string& str, const std::string& delimiter) {
+        std::string str0 = str;
+
+        std::vector<std::string> parts;
+        size_t pos = 0;
+        std::string token;
+        while ((pos = str0.find(delimiter)) != std::string::npos) {
+            token = str0.substr(0, pos);
+            parts.push_back(token);
+            str0.erase(0, pos + delimiter.length());
+        }
+        parts.push_back(str0);
+        return parts;
+    }
+
     static std::vector<std::vector<std::string>> split(const std::vector<std::string>& file) {
         int index = 0;
         for (int i = 0; i < file.size(); i++) {
@@ -69,15 +84,13 @@ namespace {
         return map;
     }
 
-    static std::vector<Coordinate2D> read2DPoints(std::string& input) {
+    static std::vector<Coordinate2D> read2DPoints(const std::string& input) {
         std::vector<Coordinate2D> points;
 
         const std::regex matrix("[\\[\\]()]");
+        const std::vector<std::string> split = splitString(input, "*");
 
-        size_t pos = 0;
-        std::string s0;
-        while ((pos = input.find('*')) != std::string::npos) {
-            s0 = input.substr(0, pos);
+        for (std::string s0 : split) {
             if (s0.empty()) continue;
 
             if (s0.rfind('(', 0) == 0 && s0.rfind(']') == s0.size() - 1) {
@@ -110,22 +123,18 @@ namespace {
                         points.push_back(Coordinate2D(cx + x, cy + y));
             } else
                 points.push_back(Coordinate2D::from_string(s0));
-
-            input.erase(0, pos + 1);
         }
 
         return points;
     }
 
-    static std::vector<Coordinate3D> read3DPoints(std::string& input) {
+    static std::vector<Coordinate3D> read3DPoints(const std::string& input) {
         std::vector<Coordinate3D> points;
 
         const std::regex matrix("[\\[\\]()]");
+        const std::vector<std::string> split = splitString(input, "*");
 
-        size_t pos = 0;
-        std::string s0;
-        while ((pos = input.find('*')) != std::string::npos) {
-            s0 = input.substr(0, pos);
+        for (std::string s0 : split) {
             if (s0.empty()) continue;
 
             if (s0.rfind('(', 0) == 0 && s0.rfind(']') == s0.size() - 1) {
@@ -162,16 +171,14 @@ namespace {
                             points.push_back(Coordinate3D(cx + x, cy + y, cz + z));
             } else
                 points.push_back(Coordinate3D::from_string(s0));
-
-            input.erase(0, pos + 1);
         }
 
         return points;
     }
 
     static Block readBlock(std::string& input) {
-        input.erase(std::remove(input.begin(), input.end(), ' '));
-        input.erase(std::remove(input.begin(), input.end(), '>'));
+        input.erase(std::remove(input.begin(), input.end(), ' '), input.end());
+        input.erase(std::remove(input.begin(), input.end(), '>'), input.end());
 
         size_t pos = input.find('<');
         if (pos == std::string::npos)
@@ -198,7 +205,7 @@ namespace {
     }
 
     static std::pair<Block, std::vector<Coordinate2D>> read2DLine(std::string& line) {
-        line.erase(std::remove(line.begin(), line.end(), ' '));
+        line.erase(std::remove(line.begin(), line.end(), ' '), line.end());
 
         size_t pos = line.find(':');
         std::string block = line.substr(0, pos);
