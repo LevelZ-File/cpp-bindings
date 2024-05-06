@@ -84,6 +84,8 @@ namespace LevelZ {
              */
             std::string to_string() const {
                 std::string str;
+                if (properties.empty()) return name;
+
                 str += name + "<";
 
                 for (auto const& [k, v] : properties) {
@@ -93,6 +95,15 @@ namespace LevelZ {
                 str += ">";
 
                 return str;
+            }
+
+            /**
+             * Overloads the << operator to allow for easy printing of a Block.
+             * @param strm The output stream to write to.
+             * @return The output stream.
+             */
+            std::ostream& operator<<(std::ostream &strm) {
+                return strm << to_string();
             }
     };
 
@@ -158,6 +169,15 @@ namespace LevelZ {
              */
             std::string to_string() const {
                 return _block.to_string() + ": " + _coordinate->to_string();
+            }
+
+            /**
+             * Overloads the << operator to allow for easy printing of a LevelObject.
+             * @param strm The output stream to write to.
+             * @return The output stream.
+             */
+            std::ostream& operator<<(std::ostream &strm) {
+                return strm << to_string();
             }
     };
 

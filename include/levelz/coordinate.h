@@ -151,6 +151,15 @@ namespace LevelZ {
             }
 
             /**
+             * Overloads the << operator to allow for easy printing of a Coordinate2D.
+             * @param strm The output stream to write to.
+             * @return The output stream.
+             */
+            std::ostream& operator<<(std::ostream &strm) {
+                return strm << to_string();
+            }
+
+            /**
              * Converts a string to a 2D coordinate.
              * @param str The string to convert.
              * @return Coordinate2D The 2D coordinate.
@@ -295,6 +304,15 @@ namespace LevelZ {
              */
             std::string to_string() const {
                 return "[" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + "]";
+            }
+
+            /**
+             * Overloads the << operator to allow for easy printing of a Coordinate3D.
+             * @param strm The output stream to write to.
+             * @return The output stream.
+             */
+            std::ostream& operator<<(std::ostream &strm) {
+                return strm << to_string();
             }
 
             /**
