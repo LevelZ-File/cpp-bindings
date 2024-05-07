@@ -16,7 +16,7 @@ jobs:
       - name: Configure Project
         run: cmake .
       - name: Build Project
-        run: cmake --build . --config Release --target install
+        run: sudo cmake --build . --config Release --target install
       - name: Test Project
         run: ctest
   
