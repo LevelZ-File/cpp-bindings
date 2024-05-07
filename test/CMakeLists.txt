@@ -7,7 +7,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/bin)
 # Tests
 function(add_test_executable name)
     add_executable(levelz-test-${name} "src/${name}.cpp" "src/test.h")
-    target_link_libraries(levelz-test-${name} PRIVATE levelz-cpp)
+    target_include_directories(levelz-test-${name} PRIVATE "../include")
     add_test(NAME ${name} COMMAND levelz-test-${name})
 endfunction()
 
