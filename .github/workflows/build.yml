@@ -13,9 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Configure Project
+        run: cmake .
       - name: Build Project
         run: cmake --build . --config Release --target install
-
       - name: Test Project
         run: ctest
   

@@ -10,7 +10,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Sources
 add_library(levelz-cpp INTERFACE)
-target_include_directories(levelz-cpp INTERFACE include)
 
 # Testing
 enable_testing()
