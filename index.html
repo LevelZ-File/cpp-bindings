@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>levelz-cpp: Main Page</title>
+<title>levelz-cpp: levelz-cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,10 +71,48 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">levelz-cpp Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">levelz-cpp </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2runner_2work_2cpp-bindings_2cpp-bindings_2README"></a> </p><blockquote class="doxtable">
+<p>&zwj;Header-only C/C++ Parser &amp; API For LevelZ File Format </p>
+</blockquote>
+<p><img src="https://img.shields.io/github/v/release/LevelZ-File/java-bindings" alt="GitHub Release" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Overview</h1>
+<p>Provides C/C++ bindings for the LevelZ file format. This library is header-only and does not require any additional dependencies.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Installation</h1>
+<p>Ensure you have <a href="https://cmake.org/">CMake</a> installed on your system, then run the following commands:</p>
+<div class="fragment"><div class="line"># Clone Repo</div>
+<div class="line">git clone https://github.com/LevelZ-File/cpp-bindings</div>
+<div class="line">cd cpp-bindings</div>
+<div class="line"> </div>
+<div class="line"># Build Project, Install with CMake</div>
+<div class="line">cmake --build . --config Release --target install</div>
+<div class="line"> </div>
+<div class="line">## may require sudo</div>
+<div class="line">sudo cmake --build . --config Release --target install</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Usage</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;levelz.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_struct" href="structLevelZ_1_1Coordinate2D.html">LevelZ::Coordinate2D</a> coord = {0, 0};</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="astructLevelZ_1_1Coordinate2D_html"><div class="ttname"><a href="structLevelZ_1_1Coordinate2D.html">LevelZ::Coordinate2D</a></div><div class="ttdef"><b>Definition</b> coordinate.h:28</div></div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;levelz.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">using namespace </span>LevelZ;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    <a class="code hl_struct" href="structLevelZ_1_1Level.html">Level</a> l = parseFile(<span class="stringliteral">&quot;path/to/file.lvlz&quot;</span>)</div>
+<div class="line">    return 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="astructLevelZ_1_1Level_html"><div class="ttname"><a href="structLevelZ_1_1Level.html">LevelZ::Level</a></div><div class="ttdef"><b>Definition</b> level.h:14</div></div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 <!-- start footer part -->
