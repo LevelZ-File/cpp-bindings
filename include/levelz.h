@@ -286,4 +286,21 @@ namespace LevelZ {
         return parseLines(lines);
     }
 
+    /**
+     * Parses a level from the specified file.
+     * @param file The file to read the level from.
+     * @return The level read from the file.
+     */
+    Level parseFile(const std::string& file) {
+        std::vector<std::string> lines;
+        std::fstream stream(file);
+
+        std::string line;
+        while (std::getline(stream, line)) {
+            lines.push_back(line);
+        }
+
+        return parseLines(lines);
+    }
+
 }
