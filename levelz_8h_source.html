@@ -356,7 +356,19 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">return</span> parseLines(lines);</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <a class="code hl_struct" href="structLevelZ_1_1Level.html">Level</a> parseFile(<span class="keyword">const</span> std::string&amp; file) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        std::vector&lt;std::string&gt; lines;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        std::fstream stream(file);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        std::string line;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">while</span> (std::getline(stream, line)) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            lines.push_back(line);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keywordflow">return</span> parseLines(lines);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
 <div class="ttc" id="astructLevelZ_1_1Block_html"><div class="ttname"><a href="structLevelZ_1_1Block.html">LevelZ::Block</a></div><div class="ttdef"><b>Definition</b> block.h:11</div></div>
 <div class="ttc" id="astructLevelZ_1_1Coordinate2D_html"><div class="ttname"><a href="structLevelZ_1_1Coordinate2D.html">LevelZ::Coordinate2D</a></div><div class="ttdef"><b>Definition</b> coordinate.h:28</div></div>
 <div class="ttc" id="astructLevelZ_1_1Coordinate2D_html_a5490eb9178c7dfbf6116d658b8bc137a"><div class="ttname"><a href="structLevelZ_1_1Coordinate2D.html#a5490eb9178c7dfbf6116d658b8bc137a">LevelZ::Coordinate2D::from_string</a></div><div class="ttdeci">static Coordinate2D from_string(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> coordinate.h:167</div></div>
