@@ -12,6 +12,7 @@ DartConfiguration.tcl
 levelz-test-*
 CMakeDoxyfile.in
 CMakeDoxygenDefaults.cmake
+install_manifest.txt
 
 *.o
 *.a
