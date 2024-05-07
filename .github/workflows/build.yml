@@ -11,31 +11,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        compiler: [g++, clang++]
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
-      - name: Set Reusable Strings
-        id: strings
-        shell: bash
-        run: |
-          echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
-
-      - name: Configure CMake
-        run: >
-          cmake -B ${{ steps.strings.outputs.build-output-dir }}
-          -DCMAKE_CXX_COMPILER=${{ matrix.compiler }}
-          -S ${{ github.workspace }}
-
       - name: Build Project
-        run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config Release --target install
+        run: cmake --build . --config Release --target install
 
       - name: Test Project
-        working-directory: ${{ steps.strings.outputs.build-output-dir }}
         run: ctest
   
   deploy:
@@ -48,6 +29,6 @@ jobs:
       - name: Install Doxygen
         uses: ssciwr/doxygen-install@v1
       - name: Build Docs
-        run: cmake . && make docs
+        run: cmake --build . --config Release --target install && make docs
       - name: Deploy Doxygen
         run: bash doxygen.sh ${GITHUB_SHA::7}
