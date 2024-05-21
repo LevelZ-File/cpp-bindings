@@ -2,7 +2,7 @@
 
 > Header-only C/C++ Parser & API For LevelZ File Format
 
-![GitHub Release](https://img.shields.io/github/v/release/LevelZ-File/java-bindings)
+![GitHub Release](https://img.shields.io/github/v/release/LevelZ-File/cpp-bindings)
 
 ## Overview
 
