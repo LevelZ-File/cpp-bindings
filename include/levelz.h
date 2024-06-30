@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <sstream>
 #include <cstdio>
 #include <unordered_map>
 #include <algorithm>
@@ -249,14 +250,19 @@ namespace LevelZ {
 
         std::vector<LevelObject> blocks;
         for (std::string& line : parts[1]) {
+            if (line[0] == '#') continue;
             if (line == END) break;
 
+            int ci = line.find('#');
+            std::string line0 = ci == std::string::npos ? line : line.substr(0, ci);
+            line0.erase(line0.find_last_not_of(" \n\r\t") + 1);
+
             if (is2D) {
-                std::pair<Block, std::vector<Coordinate2D>> pair = read2DLine(line);
+                std::pair<Block, std::vector<Coordinate2D>> pair = read2DLine(line0);
                 for (Coordinate2D& point : pair.second)
                     blocks.push_back(LevelObject(pair.first, point));
             } else {
-                std::pair<Block, std::vector<Coordinate3D>> pair = read3DLine(line);
+                std::pair<Block, std::vector<Coordinate3D>> pair = read3DLine(line0);
                 for (Coordinate3D& point : pair.second)
                     blocks.push_back(LevelObject(pair.first, point));
             }
