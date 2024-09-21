@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <vector>
 #include <fstream>
@@ -10,6 +12,7 @@
 #include "levelz/coordinate.h"
 #include "levelz/block.h"
 #include "levelz/level.h"
+#include "levelz/matrix.h"
 
 using namespace LevelZ;
 
@@ -88,40 +91,14 @@ namespace {
     static std::vector<Coordinate2D> read2DPoints(const std::string& input) {
         std::vector<Coordinate2D> points;
 
-        const std::regex matrix("[\\[\\]()]");
         const std::vector<std::string> split = splitString(input, "*");
 
         for (std::string s0 : split) {
             if (s0.empty()) continue;
 
             if (s0.rfind('(', 0) == 0 && s0.rfind(']') == s0.size() - 1) {
-                s0 = std::regex_replace(s0, matrix, "");
-
-                unsigned int i = 0;
-                size_t cpos = 0;
-                std::string s1;
-
-                int x1, x2, y1, y2;
-                double cx, cy;
-
-                while ((cpos = s0.find(',')) != std::string::npos) {
-                    s1 = s0.substr(0, cpos);
-                    switch (i) {
-                        case 0: x1 = std::stoi(s1); break;
-                        case 1: x2 = std::stoi(s1); break;
-                        case 2: y1 = std::stoi(s1); break;
-                        case 3: y2 = std::stoi(s1); break;
-                        case 4: cx = std::stod(s1); break;
-                        case 5: cy = std::stod(s1); break;
-                    }
-                    
-                    s0.erase(0, cpos + 1);
-                    i++;
-                }
-
-                for (int x = x1; x < x2; x++)
-                    for (int y = y1; y < y2; y++)
-                        points.push_back(Coordinate2D(cx + x, cy + y));
+                for (const Coordinate2D& c : LevelZ::CoordinateMatrix2D::from_string(s0))
+                    points.push_back(c);
             } else
                 points.push_back(Coordinate2D::from_string(s0));
         }
@@ -139,37 +116,8 @@ namespace {
             if (s0.empty()) continue;
 
             if (s0.rfind('(', 0) == 0 && s0.rfind(']') == s0.size() - 1) {
-                s0 = std::regex_replace(s0, matrix, "");
-
-                unsigned int i = 0;
-                size_t cpos = 0;
-                std::string s1;
-
-                int x1, x2, y1, y2, z1, z2;
-                double cx, cy, cz;
-
-                while ((cpos = s0.find(',')) != std::string::npos) {
-                    s1 = s0.substr(0, cpos);
-                    switch (i) {
-                        case 0: x1 = std::stoi(s1); break;
-                        case 1: x2 = std::stoi(s1); break;
-                        case 2: y1 = std::stoi(s1); break;
-                        case 3: y2 = std::stoi(s1); break;
-                        case 4: z1 = std::stoi(s1); break;
-                        case 5: z2 = std::stoi(s1); break;
-                        case 6: cx = std::stod(s1); break;
-                        case 7: cy = std::stod(s1); break;
-                        case 8: cz = std::stod(s1); break;
-                    }
-                    
-                    s0.erase(0, cpos + 1);
-                    i++;
-                }
-
-                for (int x = x1; x < x2; x++)
-                    for (int y = y1; y < y2; y++)
-                        for (int z = z1; z < z2; z++)
-                            points.push_back(Coordinate3D(cx + x, cy + y, cz + z));
+                for (const Coordinate3D& c : LevelZ::CoordinateMatrix3D::from_string(s0))
+                    points.push_back(c);
             } else
                 points.push_back(Coordinate3D::from_string(s0));
         }
