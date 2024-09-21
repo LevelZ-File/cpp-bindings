@@ -18,7 +18,7 @@ jobs:
       - name: Build Project
         run: sudo cmake --build . --config Release --target install
       - name: Test Project
-        run: ctest
+        run: ctest -T test -T coverage
   
   deploy:
     runs-on: ubuntu-latest
