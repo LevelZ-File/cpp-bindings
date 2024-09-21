@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['properties_0',['properties',['../structLevelZ_1_1Block.html#add1795375ca750d7c5d0f214525cff2e',1,'LevelZ::Block']]]
+  ['name_0',['name',['../structLevelZ_1_1Block.html#af88f931d7f265ea24cf719582282bdb4',1,'LevelZ::Block']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x_0',['x',['../structLevelZ_1_1Coordinate2D.html#ae8a9392cab6dae48db1e3df7fc3cd7fa',1,'LevelZ::Coordinate2D::x'],['../structLevelZ_1_1Coordinate3D.html#a146450315f1cfb620e6000454b8b9b86',1,'LevelZ::Coordinate3D::x']]]
+  ['spawn_0',['spawn',['../structLevelZ_1_1Level2D.html#a4db8ad0bb4e7cbf578339ec108dcb2aa',1,'LevelZ::Level2D::spawn'],['../structLevelZ_1_1Level3D.html#a8f0d2c3b64f932b28b87c8ad159c2149',1,'LevelZ::Level3D::spawn']]],
+  ['start_1',['start',['../structLevelZ_1_1CoordinateMatrix2D.html#a622c0e06211c082a70b6ab4da016745b',1,'LevelZ::CoordinateMatrix2D::start'],['../structLevelZ_1_1CoordinateMatrix3D.html#a5261c050802fee8ca87789a5fda0addf',1,'LevelZ::CoordinateMatrix3D::start']]]
 ];

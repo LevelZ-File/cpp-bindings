@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>levelz-cpp: /home/runner/work/cpp-bindings/cpp-bindings/include Directory Reference</title>
+<title>levelz-cpp: LevelZ::CoordinateMatrix Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,25 +84,69 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><b>LevelZ</b></li><li class="navelem"><a class="el" href="structLevelZ_1_1CoordinateMatrix.html">CoordinateMatrix</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">include Directory Reference</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="structLevelZ_1_1CoordinateMatrix-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">LevelZ::CoordinateMatrix Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="matrix_8h_source.html">matrix.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for LevelZ::CoordinateMatrix:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="structLevelZ_1_1CoordinateMatrix.png" usemap="#LevelZ::CoordinateMatrix_map" alt=""/>
+  <map id="LevelZ::CoordinateMatrix_map" name="LevelZ::CoordinateMatrix_map">
+<area href="structLevelZ_1_1CoordinateMatrix2D.html" alt="LevelZ::CoordinateMatrix2D" shape="rect" coords="0,56,171,80"/>
+<area href="structLevelZ_1_1CoordinateMatrix3D.html" alt="LevelZ::CoordinateMatrix3D" shape="rect" coords="181,56,352,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="subdirs" name="subdirs"></a>
-Directories</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><span class="iconfclosed"></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_69b329ad395d66e31ba22e97399593f6.html">levelz</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="levelz_8h_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>levelz.h</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac8c075f80dca399f96f3e3adebfd7f83" id="r_ac8c075f80dca399f96f3e3adebfd7f83"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c075f80dca399f96f3e3adebfd7f83">to_string</a> () const =0</td></tr>
+<tr class="separator:ac8c075f80dca399f96f3e3adebfd7f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a coordinate matrix. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac8c075f80dca399f96f3e3adebfd7f83" name="ac8c075f80dca399f96f3e3adebfd7f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c075f80dca399f96f3e3adebfd7f83">&#9670;&#160;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string LevelZ::CoordinateMatrix::to_string </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Converts this coordinate matrix to a string. </p><dl class="section return"><dt>Returns</dt><dd>The string representation of the coordinate. </dd></dl>
+
+<p>Implemented in <a class="el" href="structLevelZ_1_1CoordinateMatrix2D.html#ab1956d8641479d5694ec52dd28c85c06">LevelZ::CoordinateMatrix2D</a>, and <a class="el" href="structLevelZ_1_1CoordinateMatrix3D.html#abdc069036189d0c9d345a4517d3e16d3">LevelZ::CoordinateMatrix3D</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/home/runner/work/cpp-bindings/cpp-bindings/include/levelz/<a class="el" href="matrix_8h_source.html">matrix.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['to_5fstring_0',['to_string',['../structLevelZ_1_1Block.html#a023df887f417c8decc096910af787b1c',1,'LevelZ::Block::to_string()'],['../structLevelZ_1_1LevelObject.html#a19d1e4f79b92528a554856535febd2e9',1,'LevelZ::LevelObject::to_string()'],['../structLevelZ_1_1Coordinate.html#a67bb7d9d2b7539a48045e4c8f49a2d8c',1,'LevelZ::Coordinate::to_string()'],['../structLevelZ_1_1Coordinate2D.html#ae80aabdd49393bc7a985014fe55f94f0',1,'LevelZ::Coordinate2D::to_string()'],['../structLevelZ_1_1Coordinate3D.html#a04171d2246142e9eb7c0319ef9c8f79f',1,'LevelZ::Coordinate3D::to_string()']]]
+  ['scroll_0',['scroll',['../structLevelZ_1_1Level2D.html#a6bf64fe8909ec22864fa3e94b45f07cd',1,'LevelZ::Level2D']]],
+  ['spawn_1',['spawn',['../structLevelZ_1_1Level2D.html#a4db8ad0bb4e7cbf578339ec108dcb2aa',1,'LevelZ::Level2D::spawn'],['../structLevelZ_1_1Level3D.html#a8f0d2c3b64f932b28b87c8ad159c2149',1,'LevelZ::Level3D::spawn']]],
+  ['start_2',['start',['../structLevelZ_1_1CoordinateMatrix2D.html#a622c0e06211c082a70b6ab4da016745b',1,'LevelZ::CoordinateMatrix2D::start'],['../structLevelZ_1_1CoordinateMatrix3D.html#a5261c050802fee8ca87789a5fda0addf',1,'LevelZ::CoordinateMatrix3D::start']]]
 ];
