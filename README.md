@@ -1,12 +1,12 @@
 # levelz-cpp
 
-> Header-only C/C++ Parser & API For LevelZ File Format
+> Header-only C++ Parser & API For LevelZ File Format
 
 ![GitHub Release](https://img.shields.io/github/v/release/LevelZ-File/cpp-bindings)
 
 ## Overview
 
-Provides C/C++ bindings for the LevelZ file format. This library is header-only and does not require any additional dependencies.
+Provides C++ bindings for the LevelZ file format. This library is header-only and does not require any additional dependencies.
 
 ## Installation
 
