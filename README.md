@@ -27,7 +27,7 @@ sudo cmake --build . --config Release --target install
 ## Usage
 
 ```cpp
-#include <levelz.h>
+#include <levelz.hpp>
 
 int main() {
     LevelZ::Coordinate2D coord = {0, 0};
@@ -36,7 +36,7 @@ int main() {
 ```
 
 ```cpp
-#include <levelz.h>
+#include <levelz.hpp>
 
 using namespace LevelZ;
 

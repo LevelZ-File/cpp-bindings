@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "test.h"
-#include "levelz.h"
+#include "levelz.hpp"
 
 int main() {
     int r = 0;

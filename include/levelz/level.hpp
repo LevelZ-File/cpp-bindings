@@ -3,8 +3,8 @@
 #include <vector>
 #include <unordered_map>
 
-#include "block.h"
-#include "coordinate.h"
+#include "block.hpp"
+#include "coordinate.hpp"
 
 namespace LevelZ {
 

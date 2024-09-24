@@ -9,10 +9,10 @@
 #include <algorithm>
 #include <regex>
 
-#include "levelz/coordinate.h"
-#include "levelz/block.h"
-#include "levelz/level.h"
-#include "levelz/matrix.h"
+#include "levelz/coordinate.hpp"
+#include "levelz/block.hpp"
+#include "levelz/level.hpp"
+#include "levelz/matrix.hpp"
 
 using namespace LevelZ;
 

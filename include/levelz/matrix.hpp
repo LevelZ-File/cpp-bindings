@@ -4,7 +4,7 @@
 #include <array>
 #include <regex>
 
-#include "coordinate.h"
+#include "coordinate.hpp"
 
 namespace LevelZ {
 
