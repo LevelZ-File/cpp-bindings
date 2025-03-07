@@ -6,12 +6,20 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build/bin)
 
 # Tests
 function(add_test_executable name)
-    add_executable(levelz-test-${name} "src/${name}.cpp" "src/test.h")
-    target_include_directories(levelz-test-${name} PRIVATE "../include")
-    add_test(NAME ${name} COMMAND levelz-test-${name})
+    set(TEST_NAME "levelz-test-${name}")
 
-    target_compile_options(levelz-test-${name} PRIVATE -coverage)
-    target_link_options(levelz-test-${name} PRIVATE -coverage)
+    add_executable("${TEST_NAME}" "src/${name}.cpp" "src/test.h")
+    target_link_libraries("${TEST_NAME}" PRIVATE levelz-cpp)
+    target_include_directories("${TEST_NAME}" PRIVATE "${PROJECT_SOURCE_DIR}/include")
+
+    add_dependencies("${TEST_NAME}" levelz-cpp)
+    add_test(NAME "${name}.h" COMMAND "${TEST_NAME}")
+
+    if (CMAKE_C_COMPILER_ID MATCHES "GNU|Clang")
+        target_compile_options("${TEST_NAME}" PRIVATE -coverage -lm -w)
+        target_link_options("${TEST_NAME}" PRIVATE -coverage)
+        target_link_libraries("${TEST_NAME}" PRIVATE m)
+    endif()
 endfunction()
 
 add_test_executable("coordinate")
