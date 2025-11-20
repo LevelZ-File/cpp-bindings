@@ -22,7 +22,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-dotnet@v4
         if: ${{ matrix.os == 'windows-2022' }}
         with:
@@ -69,7 +69,7 @@ jobs:
     name: Deploy Doxygen
     if: ${{ github.event_name != 'pull_request' && github.ref_name == 'master' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Install Doxygen
         uses: ssciwr/doxygen-install@v1
       - name: Configure Project
