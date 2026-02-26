@@ -44,7 +44,7 @@ jobs:
           Get-ChildItem -Path build/package/_CPack_Packages -Recurse | Remove-Item -Recurse -Force
       - name: Archive Package Artifacts
         if: success() || failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: LevelZ-${{ runner.os }}-${{ runner.arch }}-${{ github.sha }}
           path: build/package/*
@@ -57,7 +57,7 @@ jobs:
         run: ctest -C Debug -T test
       - name: Archive Testing Logs
         if: success() || failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: LevelZ-Test-${{ runner.os }}-${{ runner.arch }}-${{ github.sha }}
           path: Testing/Temporary/
